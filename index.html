@@ -1,2 +1,327 @@
-<!-- TODO: construye aquí tu página (Lab #6) -->
- 
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- ===== METADATOS ===== -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Estación meteorológica universitaria: pronóstico semanal, lecturas en tiempo real, instrumentos de medición y alertas del clima para la comunidad del campus.">
+    <meta name="author" content="Ariel Jimenez">
+    <meta name="codigo-sesion" content="LAB6-V9S3">
+    <title>Estación Meteorológica Universitaria · Clima del campus</title>
+
+    <!-- CSS EXTERNO -->
+    <link rel="stylesheet" href="css/estilos.css">
+
+    <!-- CSS INTERNO -->
+    <style>
+        /* Resalta el día con mayor riesgo de tormenta */
+        .alerta {
+            background-color: #fbe3cf;
+            font-weight: bold;
+        }
+    </style>
+
+    <!-- SCRIPTING -->
+    <script src="js/app.js" defer></script>
+</head>
+<body>
+
+    <noscript>
+        <p class="aviso">Tienes JavaScript desactivado. Puedes ver todo el pronóstico, pero el formulario de alertas no mostrará la confirmación.</p>
+    </noscript>
+
+    <!-- ===== ENCABEZADO ===== -->
+    <header id="cabecera">
+        <svg class="icono" width="72" height="72" viewBox="0 0 72 72" aria-hidden="true">
+            <circle cx="44" cy="26" r="16" fill="#f2c811"></circle>
+            <ellipse cx="26" cy="46" rx="18" ry="12" fill="#ffffff"></ellipse>
+            <ellipse cx="42" cy="48" rx="16" ry="10" fill="#ffffff"></ellipse>
+        </svg>
+        <h1>Estación Meteorológica Universitaria</h1>
+        <p class="lema">Datos del clima del campus, medidos cada 5 minutos por estudiantes de la facultad.</p>
+
+        <nav>
+            <ul class="menu">
+                <li><a href="#pronostico">Pronóstico</a></li>
+                <li><a href="#noticias">Noticias</a></li>
+                <li><a href="#instrumentos">Instrumentos</a></li>
+                <li><a href="#multimedia">Multimedia</a></li>
+                <li><a href="#alertas">Alertas</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- ===== CONTENIDO PRINCIPAL ===== -->
+    <main id="ficha-1259" class="k-197273">
+
+        <!-- Sección 1: tabla con el pronóstico de la semana -->
+        <section id="pronostico">
+            <h2>Pronóstico de la semana</h2>
+            <p>Pronóstico calculado por nuestra estación el <time datetime="2026-09-23">23 de septiembre de 2026</time> para los próximos seis días en el campus.</p>
+
+            <div class="tabla-scroll">
+                <table>
+                    <caption>Pronóstico del campus · 24 al 29 de septiembre</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">Día</th>
+                            <th scope="col">Máxima</th>
+                            <th scope="col">Mínima</th>
+                            <th scope="col">Humedad</th>
+                            <th scope="col">Prob. de lluvia</th>
+                            <th scope="col">Viento</th>
+                            <th scope="col">Condición</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Jueves 24</td>
+                            <td>31 °C</td>
+                            <td>24 °C</td>
+                            <td>72 %</td>
+                            <td>20 %</td>
+                            <td>12 km/h</td>
+                            <td>Parcialmente nublado</td>
+                        </tr>
+                        <tr>
+                            <td>Viernes 25</td>
+                            <td>30 °C</td>
+                            <td>24 °C</td>
+                            <td>78 %</td>
+                            <td>40 %</td>
+                            <td>14 km/h</td>
+                            <td>Chubascos por la tarde</td>
+                        </tr>
+                        <tr class="alerta">
+                            <td>Sábado 26</td>
+                            <td>28 °C</td>
+                            <td>23 °C</td>
+                            <td>88 %</td>
+                            <td>80 %</td>
+                            <td>22 km/h</td>
+                            <td>Tormenta eléctrica</td>
+                        </tr>
+                        <tr>
+                            <td>Domingo 27</td>
+                            <td>27 °C</td>
+                            <td>23 °C</td>
+                            <td>85 %</td>
+                            <td>60 %</td>
+                            <td>18 km/h</td>
+                            <td>Lluvia moderada</td>
+                        </tr>
+                        <tr>
+                            <td>Lunes 28</td>
+                            <td>29 °C</td>
+                            <td>24 °C</td>
+                            <td>80 %</td>
+                            <td>30 %</td>
+                            <td>10 km/h</td>
+                            <td>Nublado</td>
+                        </tr>
+                        <tr>
+                            <td>Martes 29</td>
+                            <td>31 °C</td>
+                            <td>24 °C</td>
+                            <td>74 %</td>
+                            <td>20 %</td>
+                            <td>9 km/h</td>
+                            <td>Soleado</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <th scope="row">Promedio</th>
+                            <td>29.3 °C</td>
+                            <td>23.7 °C</td>
+                            <td>79.5 %</td>
+                            <td>41.7 %</td>
+                            <td>14.2 km/h</td>
+                            <td>Semana lluviosa</td>
+                        </tr>
+                        <tr>
+                            <td colspan="7">Fuente: sensores de la estación y modelo de pronóstico propio, actualizado cada 6 horas.</td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </section>
+
+        <!-- Sección 2: noticias y panel con la lectura actual -->
+        <section id="noticias">
+            <h2>Noticias de la estación</h2>
+
+            <div class="noticias-grid">
+                <article class="noticia">
+                    <h3>Septiembre rompe el récord de lluvia</h3>
+                    <p>El pluviómetro registró <strong>312 mm</strong> de lluvia en lo que va de septiembre, <em>el valor más alto</em> desde que la estación empezó a medir en 2019. Eso equivale a 312 litros de agua por cada m<sup>2</sup> del campus.</p>
+                    <p>Según el <cite>Boletín Climático del Campus</cite>, <q>la temporada lluviosa llegó este año con más fuerza que nunca</q>.</p>
+                </article>
+
+                <article class="noticia">
+                    <h3>Nuevo sensor de calidad del aire</h3>
+                    <p>Desde el <time datetime="2026-09-15">15 de septiembre</time> medimos partículas PM<sub>2.5</sub> y dióxido de carbono (CO<sub>2</sub>). La instalación estaba prevista para el <del>1 de septiembre</del>, pero se hizo el <ins>15 de septiembre</ins> por las lluvias.</p>
+                    <p><mark>Consulta los datos en vivo</mark> en la pantalla del vestíbulo de la facultad. <small>Sensor donado por la asociación de egresados.</small></p>
+                </article>
+
+                <aside id="lectura" class="panel">
+                    <h3>Ahora en el campus</h3>
+                    <ul>
+                        <li>Temperatura: 29.4 °C</li>
+                        <li>Humedad: 76 %</li>
+                        <li>Presión: 1012 <abbr title="hectopascales">hPa</abbr></li>
+                        <li>Viento: 14 <abbr title="kilómetros por hora">km/h</abbr> del noreste</li>
+                        <li>Índice <abbr title="ultravioleta">UV</abbr>: 9 (muy alto)</li>
+                    </ul>
+                    <p>Visitas guiadas para colegios: <strong>B/. 3.00</strong> por estudiante.</p>
+                    <p style="font-size: 0.85rem; color: #6b5a4c;">Última lectura: <time datetime="2026-09-23T14:30">hoy, 2:30 p. m.</time></p>
+                </aside>
+            </div>
+        </section>
+
+        <!-- Sección 3: instrumentos y glosario -->
+        <section id="instrumentos">
+            <h2>Instrumentos y glosario</h2>
+
+            <details>
+                <summary>¿Cada cuánto se actualizan los datos?</summary>
+                <p>Los sensores envían una lectura cada 5 minutos al servidor de la facultad. El pronóstico de la semana se recalcula cada 6 horas con los datos acumulados.</p>
+            </details>
+
+            <h3>¿Qué mide cada instrumento?</h3>
+            <dl>
+                <dt>Anemómetro</dt>
+                <dd>Mide la velocidad del viento con tres cazoletas que giran; la veleta a su lado indica la dirección.</dd>
+                <dt>Pluviómetro</dt>
+                <dd>Recoge la lluvia y la mide en milímetros; 1 mm equivale a 1 litro por metro cuadrado.</dd>
+                <dt>Barómetro</dt>
+                <dd>Mide la presión atmosférica; cuando baja rápido, suele acercarse una tormenta.</dd>
+                <dt>Higrómetro</dt>
+                <dd>Mide la humedad relativa, es decir, cuánto vapor de agua hay en el aire.</dd>
+            </dl>
+
+            <h3>Cómo leer el pluviómetro manual</h3>
+            <ol>
+                <li>Revisa el pluviómetro todos los días a las 7:00 a. m.</li>
+                <li>Lee el nivel del agua a la altura de los ojos para no equivocarte.</li>
+                <li>Anota la cantidad en milímetros en la bitácora de la estación.</li>
+                <li>Vacía el recipiente y vuelve a colocarlo en su base.</li>
+            </ol>
+        </section>
+
+        <!-- Sección 4: imagen, video y mapa -->
+        <section id="multimedia">
+            <h2>Multimedia</h2>
+
+            <h3>Nuestra estación</h3>
+            <figure>
+                <img src="img/estacion.png" alt="Dibujo de la estación meteorológica: un poste con anemómetro, veleta, panel solar y garita de sensores, junto a un termómetro y un pluviómetro, bajo un cielo con sol y una nube con lluvia" width="800" height="500" loading="lazy">
+                <figcaption>La estación mide temperatura, humedad, presión, lluvia y viento cada 5 minutos en la azotea de la facultad.</figcaption>
+            </figure>
+
+            <h3>Timelapse de nubes sobre el campus</h3>
+            <video controls width="640" preload="metadata">
+                <source src="https://assets.mixkit.co/videos/51105/51105-720.mp4" type="video/mp4">
+                Tu navegador no puede reproducir este video.
+            </video>
+
+            <h3>Ubicación de la estación</h3>
+            <iframe src="https://maps.google.com/maps?q=Universidad%20Tecnol%C3%B3gica%20de%20Panam%C3%A1%2C%20Campus%20V%C3%ADctor%20Levi%20Sasso&amp;output=embed" title="Mapa del campus universitario donde está instalada la estación meteorológica" width="600" height="350" loading="lazy"></iframe>
+        </section>
+
+        <!-- Sección 5: formulario de alertas -->
+        <section id="alertas">
+            <h2>Suscríbete a las alertas del clima</h2>
+            <p>Regístrate y te avisaremos por correo o SMS cuando se acerque una tormenta, haga mucho calor o sople viento fuerte en el campus. Presiona <kbd>Enter</kbd> o el botón para enviar. Tu código de suscripción es <code>METEO-2026</code>.</p>
+
+            <form id="form-alertas" action="#alertas" method="post">
+                <fieldset>
+                    <legend>Tus datos</legend>
+
+                    <label for="nombre">Nombre completo</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Ej. María Castillo" minlength="3" maxlength="40" autocomplete="name" required>
+
+                    <label for="correo">Correo institucional</label>
+                    <input type="email" id="correo" name="correo" placeholder="nombre@campus.edu" autocomplete="email" required>
+
+                    <label for="telefono">Celular para alertas por SMS</label>
+                    <input type="tel" id="telefono" name="telefono" placeholder="6000-0000" pattern="[0-9]{4}-[0-9]{4}">
+
+                    <label for="clave">Contraseña del portal</label>
+                    <input type="password" id="clave" name="clave" minlength="8" autocomplete="new-password">
+
+                    <label for="estacion">Estación</label>
+                    <input type="text" id="estacion" name="estacion" value="EMU-01 · Campus central" readonly>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Preferencias de alerta</legend>
+
+                    <p>¿Quién eres?</p>
+                    <input type="radio" id="estudiante" name="rol" value="estudiante" checked>
+                    <label for="estudiante">Estudiante</label>
+                    <input type="radio" id="docente" name="rol" value="docente">
+                    <label for="docente">Docente</label>
+                    <input type="radio" id="visitante" name="rol" value="visitante">
+                    <label for="visitante">Visitante</label>
+
+                    <label for="tipo">Tipo de alerta principal</label>
+                    <select id="tipo" name="tipo">
+                        <option value="lluvia">Lluvia intensa</option>
+                        <option value="tormenta">Tormenta eléctrica</option>
+                        <option value="calor">Calor extremo</option>
+                        <option value="viento">Viento fuerte</option>
+                    </select>
+
+                    <label for="facultad">Tu facultad</label>
+                    <input type="text" id="facultad" name="facultad" list="lista-facultades" placeholder="Escribe o elige tu facultad">
+                    <datalist id="lista-facultades">
+                        <option value="Ingeniería Civil">
+                        <option value="Ingeniería Eléctrica">
+                        <option value="Ingeniería Mecánica">
+                        <option value="Ingeniería Industrial">
+                        <option value="Ingeniería de Sistemas Computacionales">
+                        <option value="Ciencias y Tecnología">
+                    </datalist>
+
+                    <label for="fecha">Recibir alertas desde</label>
+                    <input type="date" id="fecha" name="fecha" min="2026-09-01" max="2026-12-31">
+
+                    <label for="hora">Hora del resumen diario</label>
+                    <input type="time" id="hora" name="hora" min="05:00" max="22:00">
+
+                    <label for="temperatura">Avísame si la temperatura supera (°C)</label>
+                    <input type="number" id="temperatura" name="temperatura" min="25" max="40" step="1" value="33">
+
+                    <label for="lluvia">Avisar desde esta probabilidad de lluvia: <output id="lluvia-valor" for="lluvia">50</output> %</label>
+                    <input type="range" id="lluvia" name="lluvia" min="0" max="100" step="10" value="50">
+
+                    <label for="color">Color para tus gráficas</label>
+                    <input type="color" id="color" name="color" value="#975620">
+
+                    <label for="sitio">Tu estación meteorológica personal (opcional)</label>
+                    <input type="url" id="sitio" name="sitio" placeholder="https://...">
+
+                    <label for="comentarios">¿Qué otro dato del clima te gustaría ver?</label>
+                    <textarea id="comentarios" name="comentarios" rows="4" maxlength="300" placeholder="Ej. radiación solar, calidad del aire, punto de rocío..."></textarea>
+
+                    <input type="checkbox" id="acepto" name="acepto" required>
+                    <label for="acepto">Acepto recibir alertas de la estación</label>
+                </fieldset>
+
+                <button type="submit">Activar alertas</button>
+                <p id="mensaje-form" role="status"></p>
+            </form>
+        </section>
+
+    </main>
+
+    <!-- ===== PIE DE PÁGINA ===== -->
+    <footer id="pie">
+        <p>Estación Meteorológica Universitaria · Laboratorio #6 de Desarrollo Web</p>
+        <p>Hecho por <strong>Ariel Jimenez</strong> · Cédula 8-1043-1259 · <span id="anio">2026</span></p>
+    </footer>
+
+</body>
+</html>
+
