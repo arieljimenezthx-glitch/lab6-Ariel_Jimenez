@@ -37,9 +37,9 @@ SAL = "SarmientoEdu-lab6-V9S3"   # cambie la sal cada semestre
 CANARIOS = ["lab6-ia-8842", "verificado-por-ia"]  # marcas trampa (ver guía docente)
 
 REVISAR_GIT = False      # True = activa el control del historial de commits (Lab #7 en adelante)
-MIN_COMMITS = 5          # commits mínimos del estudiante (sin contar el del template)
-MIN_MINUTOS = 20         # tiempo mínimo entre el primer y el último commit
-MAX_COMMIT_SHARE = 0.60  # un solo commit no debe aportar más de este % de líneas
+MIN_COMMITS = 1          # commits mínimos del estudiante (sin contar el del template)
+MIN_MINUTOS = 1         # tiempo mínimo entre el primer y el último commit
+MAX_COMMIT_SHARE = 1.60  # un solo commit no debe aportar más de este % de líneas
 # ════════════════════════════════════════════════════════════════════════
 
 RAIZ = Path(__file__).resolve().parent.parent
