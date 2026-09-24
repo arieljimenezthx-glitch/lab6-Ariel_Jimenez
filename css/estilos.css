@@ -1,1 +1,334 @@
-/* TODO: escribe aquí tus reglas CSS (Lab #6) */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* ---------- Selectores de elemento ---------- */
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #2b2119;
+    background-color: #eef3f8;
+}
+
+p {
+    margin-bottom: 0.8rem;
+}
+
+a {
+    color: #975620;
+}
+
+/* ---------- Selector de agrupación: títulos ---------- */
+h1, h2, h3 {
+    font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+    color: #975620;
+    line-height: 1.2;
+}
+
+h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.4rem;
+    border-bottom: 3px solid #f2c811;
+}
+
+h3 {
+    font-size: 1.25rem;
+    margin: 1.2rem 0 0.6rem;
+}
+
+/* ---------- Encabezado (selector de id) ---------- */
+#cabecera {
+    background: linear-gradient(135deg, #1d3557, #3a7bd5);
+    color: #ffffff;
+    text-align: center;
+    padding: 2rem 1rem 1.5rem;
+    border-bottom: 8px solid #975620;
+}
+
+#cabecera h1 {
+    color: #ffffff;
+    font-size: 2.4rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.icono {
+    margin-bottom: 0.5rem;
+}
+
+.lema {
+    font-style: italic;
+    opacity: 0.9;
+}
+
+/* ---------- Menú de navegación con flexbox ---------- */
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    list-style: none;
+    margin-top: 1.2rem;
+}
+
+.menu a {
+    display: inline-block;
+    padding: 0.5em 1.2em;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    border: 2px solid #ffffff;
+    border-radius: 999px;
+}
+
+.menu a:hover {
+    background-color: #975620;
+    border-color: #975620;
+}
+
+/* ---------- Contenedor principal (id y clase personales) ---------- */
+#ficha-1259 {
+    width: 92%;
+    max-width: 1100px;
+    margin: 2rem auto;
+}
+
+.k-197273 section {
+    background-color: #ffffff;
+    border-left: 8px solid #975620;
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 12px rgba(151, 86, 32, 0.15);
+}
+
+/* ---------- Tabla del pronóstico ---------- */
+.tabla-scroll {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    min-width: 640px;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+caption {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: #5c3312;
+}
+
+th, td {
+    border: 1px solid #e0d3c6;
+    padding: 0.5rem;
+    text-align: center;
+}
+
+thead th {
+    background-color: #975620;
+    color: #ffffff;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f7f2ec;
+}
+
+tfoot {
+    background-color: #1d3557;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+/* ---------- Noticias en cuadrícula ---------- */
+.noticias-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+}
+
+.noticia {
+    padding: 1rem;
+    border: 1px solid #e0d3c6;
+    border-radius: 10px;
+}
+
+.panel {
+    padding: 1rem;
+    background-color: #fdf6e3;
+    border: 2px dashed #975620;
+    border-radius: 10px;
+}
+
+.panel ul {
+    margin: 0 0 1rem 1.2rem;
+}
+
+/* ---------- Instrumentos y glosario ---------- */
+details {
+    background-color: #f7f2ec;
+    padding: 0.8rem 1rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+summary {
+    cursor: pointer;
+    font-weight: bold;
+    color: #975620;
+}
+
+dt {
+    font-weight: bold;
+    margin-top: 0.6rem;
+}
+
+dd {
+    margin-left: 1.5rem;
+}
+
+#instrumentos ol {
+    margin-left: 1.5rem;
+}
+
+mark {
+    background-color: #f2c811;
+    padding: 0 4px;
+}
+
+/* ---------- Multimedia ---------- */
+figure {
+    text-align: center;
+}
+
+img,
+video,
+iframe {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+iframe {
+    width: 100%;
+    height: 350px;
+    border: 3px solid #975620;
+}
+
+figcaption {
+    font-size: 0.9rem;
+    color: #6b5a4c;
+    margin-top: 0.4rem;
+}
+
+/* ---------- Formulario ---------- */
+fieldset {
+    border: 2px solid #975620;
+    border-radius: 10px;
+    padding: 1rem 1.2rem;
+    margin-bottom: 1.2rem;
+}
+
+legend {
+    padding: 0 0.5rem;
+    font-weight: bold;
+    color: #975620;
+}
+
+label {
+    display: block;
+    margin-top: 0.8rem;
+    font-weight: 600;
+}
+
+input[type="radio"] + label,
+input[type="checkbox"] + label {
+    display: inline;
+    margin-right: 1rem;
+    font-weight: normal;
+}
+
+input,
+select,
+textarea {
+    font: inherit;
+    padding: 0.4rem;
+    border: 1px solid #c9b6a4;
+    border-radius: 6px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="url"],
+input[type="password"],
+select,
+textarea {
+    width: 100%;
+}
+
+button {
+    background-color: #975620;
+    color: #ffffff;
+    font-size: 1.1rem;
+    font-weight: bold;
+    padding: 0.7rem 1.8rem;
+    border: none;
+    border-radius: 999px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #1d3557;
+}
+
+#mensaje-form {
+    margin-top: 1rem;
+    font-weight: bold;
+    color: #1d3557;
+}
+
+kbd,
+code {
+    font-family: Consolas, monospace;
+    background-color: #f3f1ec;
+    padding: 1px 6px;
+    border-radius: 4px;
+}
+
+/* ---------- Pie de página ---------- */
+#pie {
+    background-color: #1d3557;
+    color: #ffffff;
+    text-align: center;
+    padding: 1.5rem 1rem;
+    border-top: 8px solid #975620;
+}
+
+#pie p {
+    margin-bottom: 0.3rem;
+}
+
+.aviso {
+    background-color: #f2c811;
+    color: #2b2119;
+    text-align: center;
+    padding: 0.8rem;
+}
+
+/* ---------- Pantallas pequeñas ---------- */
+@media (max-width: 600px) {
+    #cabecera h1 {
+        font-size: 1.6rem;
+    }
+
+    th, td {
+        padding: 0.3rem;
+        font-size: 0.85rem;
+    }
+}
